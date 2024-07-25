@@ -1,0 +1,21 @@
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+}
+
+.nav-link img {
+    width: 2rem;
+    height: auto;
+}
+
+.logo-link img {
+    width: 5rem;
+    height: auto;
+}
+
+nav .logo-link {
+    flex-grow: 1;
+    text-align: center;
+}
