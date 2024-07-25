@@ -1,0 +1,41 @@
+#backgroundVideo {
+    width: auto;
+    height: 65em;
+}
+
+.homepage-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    background-color: rgba(120, 120, 120, 0.2);
+
+}
+
+.title,
+.description {
+    margin: 0;
+    animation: lightson .5s ease 3 forwards;
+}
+
+@keyframes lightson {
+    0% {
+        opacity: 0;
+        text-shadow: 0 0 10px rgb(0, 0, 0);
+    }
+
+    100% {
+        opacity: 1;
+        text-shadow: 0 0 10px rgb(115, 114, 114),
+            0 0 20px rgb(246, 244, 244),
+            0 0 30px rgb(250, 250, 250);
+    }
+}
