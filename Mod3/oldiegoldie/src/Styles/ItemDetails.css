@@ -1,0 +1,51 @@
+.item-details-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-info {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    text-align: start;
+    margin-top: 20px;
+    margin-left: 1rem;
+    max-width: 30rem;
+}
+
+.item-image {
+    width: 30%;
+    height: auto;
+    max-height: 40rem;
+    max-width: 30rem;
+    padding-top: 3rem;
+    transition: transform 0.5s ease-in-out;
+}
+
+.item-image:hover {
+    transform: scale(1.2);
+}
+
+.item-title {
+    font-size: 1.5rem;
+    padding-top: 3rem;
+}
+
+.back-button,
+.add-to-bag-button {
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 1rem;
+    border: none;
+    background-color: black;
+    color: white;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.back-button {
+    margin-bottom: 20rem;
+    text-decoration: none;
+}
