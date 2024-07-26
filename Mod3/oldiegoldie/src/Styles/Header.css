@@ -8,8 +8,8 @@ nav {
 .nav-link img {
     width: 1.5rem;
     height: auto;
-    padding-right: 1rem;
-    padding-left: 1rem;
+    padding-right: 0rem;
+    margin-right: 1rem;
 }
 
 .logo-link img {
