@@ -1,0 +1,87 @@
+.shopping-bag {
+    max-width: 70rem;
+    margin: auto;
+    padding: 20px;
+}
+
+.shopping-bag h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: black;
+    text-align: center;
+}
+
+.bag-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+
+.bag-item {
+    border: 1px solid #e0e0e0;
+    padding: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    background: white;
+}
+
+.bag-item-image {
+    width: 150px;
+    height: auto;
+    object-fit: contain;
+}
+
+.item-info {
+    margin-left: 20px;
+    text-align: left;
+}
+
+.bag-item-title {
+    font-size: 15px;
+    color: black;
+}
+
+.bag-item-price {
+    font-size: 1rem;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.remove-button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.remove-button:hover {
+    background-color: #ff3b2e;
+}
+
+.checkout {
+    padding: 20px;
+    border: 1px solid grey;
+    background: #fff;
+    text-align: left;
+}
+
+.checkout p {
+    font-size: 1rem;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.checkout button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.checkout button:hover {
+    background-color: #454545;
+}
