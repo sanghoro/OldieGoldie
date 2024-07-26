@@ -6,13 +6,17 @@ nav {
 }
 
 .nav-link img {
-    width: 2rem;
+    width: 1.5rem;
     height: auto;
+    padding-right: 1rem;
+    padding-left: 1rem;
 }
 
 .logo-link img {
-    width: 5rem;
+    width: 4rem;
     height: auto;
+    padding: none;
+    margin: 0;
 }
 
 nav .logo-link {
