@@ -49,3 +49,14 @@
     margin-bottom: 20rem;
     text-decoration: none;
 }
+
+.add-to-bag-button {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+.back-button:hover,
+.add-to-bag-button:hover {
+    background-color: #454545;
+}

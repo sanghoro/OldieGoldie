@@ -1,15 +1,28 @@
 nav {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     padding: 1rem;
+    position: relative;
+}
+
+.nav-left,
+.nav-right {
+    display: flex;
+    align-items: center;
 }
 
 .nav-link img {
     width: 1.5rem;
     height: auto;
-    padding-right: 0rem;
     margin-right: 1rem;
+}
+
+.logo-container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
 }
 
 .logo-link img {
@@ -17,9 +30,4 @@ nav {
     height: auto;
     padding: none;
     margin: 0;
-}
-
-nav .logo-link {
-    flex-grow: 1;
-    text-align: center;
 }

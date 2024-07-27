@@ -65,11 +65,16 @@
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.7);
     padding: 10px;
 }
 
 .section h2 {
     font-size: 1.2rem;
     margin: 0;
+}
+
+.section:hover {
+    box-shadow: 3px 3px 10px lightslategray;
+    border: none;
 }
