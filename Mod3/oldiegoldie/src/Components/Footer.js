@@ -9,10 +9,12 @@ const Footer = () => {
     <div className='info-section'>
         <div className='person'>
             <h2 className='name'>Seong Kang</h2>
-            <img className='github' src={github} alt='GitHub-logo' />
-            <a href='https://github.com/Sanghoro' className='github-link'>@GitHub</a>
-            <img className='linkedin' src={linkedin} alt='LinkedIn-Logo' />
-            <a href='https://www.linkedin.com/in/seong-kang/' className='linkedin-link'>@LinkedIn</a>
+            <a href='https://github.com/Sanghoro' className='github-link'>
+              <img className='github' src={github} alt='GitHub-logo' />
+            </a>
+            <a href='https://www.linkedin.com/in/seong-kang/' className='linkedin-link'>
+              <img className='linkedin' src={linkedin} alt='LinkedIn-Logo' />
+            </a>
         </div>
     </div>
 </footer>

@@ -1,15 +1,16 @@
 .footer {
+    margin-top: 0.7rem;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: #1a1a1a;
+    background-color: rgb(77, 77, 77);
     color: #fff;
     padding: 1rem;
 }
 
 .created-by {
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
 .name {

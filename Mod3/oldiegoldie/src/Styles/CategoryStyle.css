@@ -26,3 +26,9 @@
     font-weight: 100;
     padding: 5px 30px;
 }
+
+.items-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    gap: 0.2rem;
+}
