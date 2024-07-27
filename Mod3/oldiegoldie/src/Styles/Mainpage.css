@@ -25,6 +25,13 @@
 .description {
     margin: 0;
     animation: lightson .5s ease 3 forwards;
+    animation-iteration-count: 1;
+    font-family: 'Playfair Display', serif;
+}
+
+.homepage-title a {
+    text-decoration: none;
+    color: white;
 }
 
 @keyframes lightson {
@@ -45,6 +52,8 @@
     display: flex;
     justify-content: space-around;
     background-color: #f8f8f8;
+    font-family: 'Playfair Display', serif;
+
 }
 
 .section {
@@ -65,11 +74,16 @@
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.7);
     padding: 10px;
 }
 
 .section h2 {
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin: 0;
+}
+
+.section:hover {
+    box-shadow: 5px 15px 15px rgb(77, 77, 77);
+    border: none;
 }
