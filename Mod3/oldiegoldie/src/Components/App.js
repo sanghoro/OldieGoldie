@@ -12,9 +12,11 @@ import ItemDetails from './ItemDetails';
 import Header from './Header';
 import Footer from './Footer';
 
+
 function App() {
   const [bagItems, setBagItems] = useState([]);
   const [allItems, setAllItems] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("")
 
   useEffect(() => {
     fetch('https://fakestoreapi.com/products')
@@ -42,6 +44,7 @@ function App() {
     setBagItems(filteredItems)
   }
 
+
   return (
     <div className="App">
       <Header />
@@ -49,7 +52,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Mainpage />} />
           <Route path="/all-items" element={<AllItems items={allItems} addToBag={handleAddToBag} />} />
-          <Route path="/search" element={<SearchItems />} />
+          <Route path="/search" element={<SearchItems searchTerm={searchTerm} setSearchTerm={setSearchTerm} allItems={allItems} addToBag={handleAddToBag}/>} />
           <Route path="/shopping-bag" element={<ShoppingBag bagItems={bagItems} deleteItem={deleteItem} />} />        
           <Route path="/womens-fashion" element={<WomensFashion items={allItems} addToBag={handleAddToBag} />} />
           <Route path="/mens-fashion" element={<MensFashion items={allItems} addToBag={handleAddToBag} />} />
@@ -57,10 +60,9 @@ function App() {
           <Route path="/electronics" element={<Electronics items={allItems} addToBag={handleAddToBag} />} />
           <Route path="/item/:id" element={<ItemDetails addToBag={handleAddToBag} />} />
         </Routes>
+        </div>
       </div>
-      {/* <Footer /> */}
-    </div>
-  );
+    );
 }
 
 export default App;
