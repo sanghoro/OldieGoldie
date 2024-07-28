@@ -11,6 +11,7 @@ import Electronics from './Electronics';
 import ItemDetails from './ItemDetails';
 import Header from './Header';
 import Footer from './Footer';
+import Receipt from './Receipt';
 
 
 function App() {
@@ -44,6 +45,9 @@ function App() {
     setBagItems(filteredItems)
   }
 
+  const subtotal = bagItems.reduce((total, item) => total + item.price, 0);
+  const tax = subtotal * 0.0625;
+  const total = subtotal + tax;
 
   return (
     <div className="App">
@@ -59,6 +63,7 @@ function App() {
           <Route path="/jewelry" element={<Jewelry items={allItems} addToBag={handleAddToBag} />} />
           <Route path="/electronics" element={<Electronics items={allItems} addToBag={handleAddToBag} />} />
           <Route path="/item/:id" element={<ItemDetails addToBag={handleAddToBag} />} />
+          <Route path="/receipt" element={<Receipt bagItems={bagItems} subtotal={subtotal} tax={tax} total={total} />} />
         </Routes>
         </div>
       </div>

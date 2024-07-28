@@ -6,7 +6,6 @@ import ShopIcon from '../Assets/Shop-Icon.png';
 import HomeIcon from '../Assets/Home-Icon2.png';
 import SearchIcon from '../Assets/Search-Icon.png';
 import Logo from '../Assets/Logo.png';
-import DropDown from '../Assets/dropdown.png'
 
 const Header = () => {
   return (

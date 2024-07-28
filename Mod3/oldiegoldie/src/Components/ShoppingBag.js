@@ -1,5 +1,6 @@
 import React from 'react';
 import '../Styles/ShoppingBag.css';
+import { Link } from 'react-router-dom';
 
 const ShoppingBag = ({ bagItems, deleteItem }) => {
   if (bagItems.length === 0) {
@@ -31,9 +32,11 @@ const ShoppingBag = ({ bagItems, deleteItem }) => {
         </div>
         <div className="checkout">
           <p>Subtotal: ${subtotal}</p>
-          <p>Tax(6.25%): ${tax.toFixed(2)}</p>
+          <p>Sales Tax(6.25%): ${tax.toFixed(2)}</p>
           <p className='total'>Total: ${total.toFixed(2)}</p>
-          <button>Proceed to Checkout</button>
+          <Link to="/receipt">
+            <button className="checkout-button">Proceed to Checkout</button>
+          </Link>
         </div>
       </div>
     </div>
