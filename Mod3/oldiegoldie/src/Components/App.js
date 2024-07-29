@@ -11,10 +11,13 @@ import Electronics from './Electronics';
 import ItemDetails from './ItemDetails';
 import Header from './Header';
 import Footer from './Footer';
+import Receipt from './Receipt';
+
 
 function App() {
   const [bagItems, setBagItems] = useState([]);
   const [allItems, setAllItems] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("")
 
   useEffect(() => {
     fetch('https://fakestoreapi.com/products')
@@ -42,6 +45,10 @@ function App() {
     setBagItems(filteredItems)
   }
 
+  const subtotal = bagItems.reduce((total, item) => total + item.price, 0);
+  const tax = subtotal * 0.0625;
+  const total = subtotal + tax;
+
   return (
     <div className="App">
       <Header />
@@ -49,18 +56,18 @@ function App() {
         <Routes>
           <Route path="/" element={<Mainpage />} />
           <Route path="/all-items" element={<AllItems items={allItems} addToBag={handleAddToBag} />} />
-          <Route path="/search" element={<SearchItems />} />
+          <Route path="/search" element={<SearchItems searchTerm={searchTerm} setSearchTerm={setSearchTerm} allItems={allItems} addToBag={handleAddToBag}/>} />
           <Route path="/shopping-bag" element={<ShoppingBag bagItems={bagItems} deleteItem={deleteItem} />} />        
           <Route path="/womens-fashion" element={<WomensFashion items={allItems} addToBag={handleAddToBag} />} />
           <Route path="/mens-fashion" element={<MensFashion items={allItems} addToBag={handleAddToBag} />} />
           <Route path="/jewelry" element={<Jewelry items={allItems} addToBag={handleAddToBag} />} />
           <Route path="/electronics" element={<Electronics items={allItems} addToBag={handleAddToBag} />} />
           <Route path="/item/:id" element={<ItemDetails addToBag={handleAddToBag} />} />
+          <Route path="/receipt" element={<Receipt bagItems={bagItems} subtotal={subtotal} tax={tax} total={total} />} />
         </Routes>
+        </div>
       </div>
-      {/* <Footer /> */}
-    </div>
-  );
+    );
 }
 
 export default App;

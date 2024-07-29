@@ -84,6 +84,6 @@
 }
 
 .section:hover {
-    box-shadow: 5px 15px 15px rgb(77, 77, 77);
+    box-shadow: 1rem rgb(77, 77, 77);
     border: none;
 }
