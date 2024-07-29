@@ -13,7 +13,7 @@ const Mainpage = () => {
     <div className="homepage">
       <div className="homepage-video">
         <video autoPlay loop muted id="backgroundVideo">
-          <source src={introVideo} type="video/mp4" />
+          <source src={introVideo} type="video/mp4"  />
         </video>
       
         <div className="homepage-title">

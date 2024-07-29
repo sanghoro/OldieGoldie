@@ -1,0 +1,13 @@
+.receipt {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.total-section {
+    margin-top: 3rem;
+    padding: 2rem;
+    border: solid 3px black;
+}
