@@ -18,6 +18,7 @@ function App() {
   const [bagItems, setBagItems] = useState([]);
   const [allItems, setAllItems] = useState([]);
   const [searchTerm, setSearchTerm] = useState("")
+  const [receiptData, setReceiptData] = useState(null)
 
   useEffect(() => {
     fetch('https://fakestoreapi.com/products')
@@ -49,6 +50,12 @@ function App() {
   const tax = subtotal * 0.0625;
   const total = subtotal + tax;
 
+  const proceedToCheckout = () => {
+    const data = {bagItems, subtotal, tax, total}
+    setReceiptData(data)
+    setBagItems([])
+  }
+  
   return (
     <div className="App">
       <Header />
@@ -57,13 +64,13 @@ function App() {
           <Route path="/" element={<Mainpage />} />
           <Route path="/all-items" element={<AllItems items={allItems} addToBag={handleAddToBag} />} />
           <Route path="/search" element={<SearchItems searchTerm={searchTerm} setSearchTerm={setSearchTerm} allItems={allItems} addToBag={handleAddToBag}/>} />
-          <Route path="/shopping-bag" element={<ShoppingBag bagItems={bagItems} deleteItem={deleteItem} />} />        
+          <Route path="/shopping-bag" element={<ShoppingBag bagItems={bagItems} deleteItem={deleteItem} subtotal={subtotal} tax={tax} total={total} proceedToCheckout={proceedToCheckout}/>} />        
           <Route path="/womens-fashion" element={<WomensFashion items={allItems} addToBag={handleAddToBag} />} />
           <Route path="/mens-fashion" element={<MensFashion items={allItems} addToBag={handleAddToBag} />} />
           <Route path="/jewelry" element={<Jewelry items={allItems} addToBag={handleAddToBag} />} />
           <Route path="/electronics" element={<Electronics items={allItems} addToBag={handleAddToBag} />} />
           <Route path="/item/:id" element={<ItemDetails addToBag={handleAddToBag} />} />
-          <Route path="/receipt" element={<Receipt bagItems={bagItems} subtotal={subtotal} tax={tax} total={total} />} />
+          <Route path="/receipt" element={<Receipt receiptData={receiptData} />} />
         </Routes>
         </div>
       </div>
