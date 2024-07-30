@@ -1,18 +1,11 @@
-import React from 'react';
 import '../Styles/ShoppingBag.css';
 import { Link } from 'react-router-dom';
 
-const ShoppingBag = ({ bagItems, deleteItem }) => {
+const ShoppingBag = ({ bagItems, deleteItem, subtotal, tax, total, proceedToCheckout }) => {
+
   if (bagItems.length === 0) {
     return <p>Your bag is empty</p>;
   }
-
-  const subtotal = bagItems.reduce((total, item) => {
-    return total + item.price;
-  }, 0)
-
-  const tax = subtotal * 0.0625
-  const total = subtotal + tax
 
   return (
     <div className="shopping-bag">
@@ -35,7 +28,7 @@ const ShoppingBag = ({ bagItems, deleteItem }) => {
           <p>Sales Tax(6.25%): ${tax.toFixed(2)}</p>
           <p className='total'>Total: ${total.toFixed(2)}</p>
           <Link to="/receipt">
-            <button className="checkout-button">Proceed to Checkout</button>
+            <button className="checkout-button" onClick={proceedToCheckout}>Proceed to Checkout</button>
           </Link>
         </div>
       </div>

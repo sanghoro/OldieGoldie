@@ -1,14 +1,18 @@
 import React from 'react';
 import '../Styles/Receipt.css'
 
-const Receipt = ({ bagItems, subtotal, tax, total }) => {
+const Receipt = ({receiptData}) => {
+
+  const { bagItems, subtotal, tax, total } = receiptData;
+
   return (
     <div className='receipt'>
-      <h1>Receipt</h1>
+      <h1>Purchase Successful</h1>
+      <h2>Receipt</h2>
         <div>
           <div>
             {bagItems.map(item => (
-              <p key={item.uniqueId}>{item.title} : ${item.price.toFixed(2)}</p>
+              <p key={item.uniqueId}>{item.title} : ${item.price}</p>
             ))}
           </div>
           <div className='total-section'>
