@@ -1,5 +1,6 @@
 import '../Styles/ShoppingBag.css';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types'
 
 const ShoppingBag = ({ bagItems, deleteItem, subtotal, tax, total, proceedToCheckout }) => {
 
@@ -38,6 +39,22 @@ const ShoppingBag = ({ bagItems, deleteItem, subtotal, tax, total, proceedToChec
       </div>
     </div>
   );
+};
+
+ShoppingBag.propTypes = {
+  bagItems: PropTypes.arrayOf(
+    PropTypes.shape({
+      uniqueId: PropTypes.number.isRequired,
+      image: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
+      price: PropTypes.number.isRequired
+    })
+  ).isRequired,
+  deleteItem: PropTypes.func.isRequired,
+  subtotal: PropTypes.number.isRequired,
+  tax: PropTypes.number.isRequired,
+  total: PropTypes.number.isRequired,
+  proceedToCheckout: PropTypes.func.isRequired
 };
 
 export default ShoppingBag;

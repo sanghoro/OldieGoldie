@@ -10,7 +10,6 @@ import Jewelry from './Jewelry';
 import Electronics from './Electronics';
 import ItemDetails from './ItemDetails';
 import Header from './Header';
-import Footer from './Footer';
 import Receipt from './Receipt';
 import PageNotFound from './PageNotFound';
 
