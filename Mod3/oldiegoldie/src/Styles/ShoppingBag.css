@@ -87,3 +87,13 @@
     font-weight: bold;
     padding-top: 1rem;
 }
+
+.empty-bag-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10rem;
+}
+
+.empty-bag-message {
+    font-size: 1.5rem;
+}
