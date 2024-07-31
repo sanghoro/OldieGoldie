@@ -19,6 +19,7 @@ function App() {
   const [allItems, setAllItems] = useState([]);
   const [searchTerm, setSearchTerm] = useState("")
   const [receiptData, setReceiptData] = useState(null)
+  const [error, setError] = useState(null)
 
   useEffect(() => {
     fetch('https://fakestoreapi.com/products')
@@ -29,10 +30,9 @@ function App() {
         return response.json();
       })
       .then(data => {
-        console.log('fetched data', data);
         setAllItems(data);
       })
-      .catch(err => console.log('Error fetching data', err));
+      .catch(err => setError(err.message))
   }, []);
 
   const handleAddToBag = (item) => {
@@ -60,6 +60,7 @@ function App() {
     <div className="App">
       <Header />
       <div className="content">
+        {error && <div className="error-message">{error}</div>}
         <Routes>
           <Route path="/" element={<Mainpage />} />
           <Route path="/all-items" element={<AllItems items={allItems} addToBag={handleAddToBag} />} />

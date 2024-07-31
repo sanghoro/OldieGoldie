@@ -19,7 +19,11 @@ const ItemDetails = ({ addToBag }) => {
   }, [id]);
 
   if (!item) {
-    return <p>...loading...</p>
+    return (
+      <div className="loadingMessageContainer"> 
+        <p className="loadingMessage">...loading...</p>
+      </div>
+    )
   }
 
   const addToMyBag = () => {

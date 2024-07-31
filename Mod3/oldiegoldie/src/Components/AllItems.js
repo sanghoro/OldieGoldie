@@ -18,7 +18,9 @@ const AllItems = ({items, addToBag}) => {
               <ItemCard key={item.id} item={item} addToBag={addToBag}/>
             ))
           ) : (
+            <div className="loadingMessageContainer"> 
             <p className="loadingMessage">...loading...</p>
+            </div>
           )}
         </div>
       </div>

@@ -11,3 +11,11 @@ h2 {
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
+
+.loadingMessage {
+    font-size: 1.5rem;
+    color: black;
+    margin-top: 2rem;
+    text-align: center;
+
+}
