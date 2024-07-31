@@ -5,17 +5,16 @@ import '../Styles/ItemDetails.css';
 const ItemDetails = ({ addToBag }) => {
   const { id } = useParams();
   const [item, setItem] = useState(null);
+  const [error, setError] = useState(null)
+
 
   useEffect(() => {
     fetch(`https://fakestoreapi.com/products/${id}`)
       .then(res => res.json())
       .then(data => {
-        console.log('single data', data);
         setItem(data);
       })
-      .catch(error => {
-        console.error('Failed to fetch item details.', error);
-      });
+      .catch(err => setError(err.message));
   }, [id]);
 
   if (!item) {
@@ -28,7 +27,6 @@ const ItemDetails = ({ addToBag }) => {
 
   const addToMyBag = () => {
     addToBag(item);
-    alert('Item added to shopping bag');
   }
 
   return (

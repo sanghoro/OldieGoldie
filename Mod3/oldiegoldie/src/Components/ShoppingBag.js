@@ -4,7 +4,11 @@ import { Link } from 'react-router-dom';
 const ShoppingBag = ({ bagItems, deleteItem, subtotal, tax, total, proceedToCheckout }) => {
 
   if (bagItems.length === 0) {
-    return <p>Your bag is empty</p>;
+    return (
+      <div className='empty-bag-container'>
+        <p className='empty-bag-message'>Your bag is empty</p>
+      </div>
+    )
   }
 
   return (

@@ -14,6 +14,9 @@ describe('should be able to checkout', () => {
     cy.url().should('eq', 'http://localhost:3000/search')
     cy.get('.Searchbar').type('jacket')
     cy.get('.add-to-bag-button').click()
+    cy.on('window:alert', (str)=> {
+      expect(str).to.equal('Item added to shopping')
+    })
     cy.get('[href="/shopping-bag"] > img').click()
     cy.get('.bag-item').should('have.length', 1)
     cy.get('.checkout-button').click()
