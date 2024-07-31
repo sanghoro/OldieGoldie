@@ -6,8 +6,8 @@ nav {
     position: relative;
 }
 
-.nav-left,
-.nav-right {
+.nav-home,
+.nav-icons {
     display: flex;
     align-items: center;
 }
