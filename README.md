@@ -1,4 +1,4 @@
-![Logo](https://github.com/user-attachments/assets/b2d5e8b3-b054-4d4a-9e83-49504a035633) ![SquareLogo](https://github.com/user-attachments/assets/5e426870-c6d9-4576-86ef-80983c88032b)
+![Logo](https://github.com/user-attachments/assets/b2d5e8b3-b054-4d4a-9e83-49504a035633)
 
 
 ## Abstract
