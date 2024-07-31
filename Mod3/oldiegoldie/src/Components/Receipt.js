@@ -1,5 +1,6 @@
 import React from 'react';
 import '../Styles/Receipt.css'
+import PropTypes from 'prop-types'
 
 const Receipt = ({receiptData}) => {
 
@@ -23,6 +24,21 @@ const Receipt = ({receiptData}) => {
         </div>
     </div>
   );
+};
+
+Receipt.propTypes = {
+  receiptData: PropTypes.shape({
+    bagItems: PropTypes.arrayOf(
+      PropTypes.shape({
+        uniqueId: PropTypes.number.isRequired,
+        title: PropTypes.string.isRequired,
+        price: PropTypes.number.isRequired,
+      })
+    ).isRequired,
+    subtotal: PropTypes.number.isRequired,
+    tax: PropTypes.number.isRequired,
+    total: PropTypes.number.isRequired,
+  })
 };
 
 export default Receipt;

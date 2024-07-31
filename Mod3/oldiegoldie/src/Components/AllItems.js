@@ -4,7 +4,7 @@ import "../Styles/CategoryStyle.css"
 import { useState, useEffect } from 'react'
 import ItemCard from './ItemCard'
 import banner from '../Assets/AllProducts-banner.jpg'
-
+import PropTypes from 'prop-types'
 
 const AllItems = ({items, addToBag}) => {
 
@@ -27,5 +27,15 @@ const AllItems = ({items, addToBag}) => {
   );
 };
 
+AllItems.propTypes = {
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      title: PropTypes.string.isRequired,
+      price: PropTypes.number.isRequired,
+    })
+  ),
+  addToBag: PropTypes.func.isRequired
+}
 
 export default AllItems

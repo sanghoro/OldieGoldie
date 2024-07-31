@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import '../Styles/ItemDetails.css';
+import PropTypes from 'prop-types'
 
 const ItemDetails = ({ addToBag }) => {
   const { id } = useParams();
@@ -43,5 +44,16 @@ const ItemDetails = ({ addToBag }) => {
     </div>
   );
 };
+
+ItemDetails.propTypes = {
+    item: PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      image: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
+      price: PropTypes.number.isRequired,
+      rating: PropTypes.string.isRequired,
+    }),
+  addToBag: PropTypes.func.isRequired
+}
 
 export default ItemDetails;

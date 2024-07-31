@@ -2,6 +2,7 @@ import React from 'react';
 import ItemCard from './ItemCard';
 import banner from '../Assets/jewel-banner.jpg'
 import "../Styles/CategoryStyle.css"
+import PropTypes from 'prop-types'
 
 const JewelFashion = ({ items, addToBag }) => {
   const JewelItemsOnly = items.filter(item => item.category === "jewelery");
@@ -26,5 +27,16 @@ const JewelFashion = ({ items, addToBag }) => {
       </div>
   );
 };
+
+JewelFashion.propTypes = {
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      title: PropTypes.string.isRequired,
+      price: PropTypes.number.isRequired,
+    })
+  ),
+  addToBag: PropTypes.func.isRequired
+}
 
 export default JewelFashion;

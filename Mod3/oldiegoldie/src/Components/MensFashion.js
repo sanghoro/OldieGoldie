@@ -2,6 +2,7 @@ import React from 'react';
 import ItemCard from './ItemCard';
 import banner from '../Assets/men-banner.jpg'
 import "../Styles/CategoryStyle.css"
+import PropTypes from 'prop-types'
 
 const MensFashion = ({ items, addToBag }) => {
   const menItemsOnly = items.filter(item => item.category === "men's clothing");
@@ -26,4 +27,14 @@ const MensFashion = ({ items, addToBag }) => {
   );
 };
 
+MensFashion.propTypes = {
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      title: PropTypes.string.isRequired,
+      price: PropTypes.number.isRequired,
+    })
+  ),
+  addToBag: PropTypes.func.isRequired
+}
 export default MensFashion;

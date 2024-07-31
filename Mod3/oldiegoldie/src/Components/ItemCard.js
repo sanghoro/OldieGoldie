@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import "../Styles/ItemCard.css";
+import PropTypes from 'prop-types'
 
 const ItemCard = ({ item, addToBag }) => {
 
@@ -20,6 +21,16 @@ const ItemCard = ({ item, addToBag }) => {
       <button onClick={handleAddToBag} className="add-to-bag-button">Add to shopping bag</button>
     </div>
   );
+};
+
+ItemCard.propTypes = {
+  item: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    title: PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired,
+    image: PropTypes.string.isRequired,
+  }),
+  addToBag: PropTypes.func.isRequired,
 };
 
 export default ItemCard;

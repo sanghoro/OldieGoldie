@@ -2,6 +2,7 @@ import React from 'react';
 import "../Styles/SearchItems.css";
 import "../Styles/CategoryStyle.css"
 import ItemCard from './ItemCard';
+import PropTypes from 'prop-types'
 
 const SearchItems = ({searchTerm, setSearchTerm, allItems, addToBag}) => {
   const handleInputChange = (event) => {
@@ -41,5 +42,19 @@ const SearchItems = ({searchTerm, setSearchTerm, allItems, addToBag}) => {
         </div>
       );
 };
+
+SearchItems.propTypes = {
+  searchTerm: PropTypes.string.isRequired,
+  setSearchTerm: PropTypes.func.isRequired,
+  allItems: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      title: PropTypes.string.isRequired,
+      price: PropTypes.number.isRequired,
+      image: PropTypes.string.isRequired,
+    })
+  ).isRequired,
+  addToBag: PropTypes.func.isRequired,
+}
 
 export default SearchItems;

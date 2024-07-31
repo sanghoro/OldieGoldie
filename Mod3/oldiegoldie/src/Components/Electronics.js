@@ -2,6 +2,8 @@ import React from 'react';
 import ItemCard from './ItemCard';
 import banner from '../Assets/elec-banner.jpg'
 import "../Styles/CategoryStyle.css"
+import PropTypes from 'prop-types'
+
 
 const ElecFashion = ({ items, addToBag }) => {
   const elecItemsOnly = items.filter(item => item.category === "electronics");
@@ -25,5 +27,14 @@ const ElecFashion = ({ items, addToBag }) => {
     </div>
   );
 };
-
+ElecFashion.propTypes = {
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      title: PropTypes.string.isRequired,
+      price: PropTypes.number.isRequired,
+    })
+  ),
+  addToBag: PropTypes.func.isRequired
+}
 export default ElecFashion;

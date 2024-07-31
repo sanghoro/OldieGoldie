@@ -2,6 +2,7 @@ import React from 'react';
 import ItemCard from './ItemCard';
 import banner from '../Assets/women-banner.jpg'
 import "../Styles/CategoryStyle.css"
+import PropTypes from 'prop-types'
 
 const WomensFashion = ({ items, addToBag }) => {
   const womenItemsOnly = items.filter(item => item.category === "women's clothing");
@@ -25,5 +26,16 @@ const WomensFashion = ({ items, addToBag }) => {
         </div>
   );
 };
+
+WomensFashion.propTypes = {
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      title: PropTypes.string.isRequired,
+      price: PropTypes.number.isRequired,
+    })
+  ),
+  addToBag: PropTypes.func.isRequired
+}
 
 export default WomensFashion;
