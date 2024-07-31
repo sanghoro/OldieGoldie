@@ -43,7 +43,7 @@ The project showcases modern web development practices, including the use of Rea
 
 ### To test with Cypress
 - [ ]  Type `npm install cypress --save-dev` into your terminal
-- [ ]  Type `npm run cy:open #` in your terminal then visit the local host to view the application in your browser.
+- [ ]  Type `npm run cypress #` in your terminal then visit the local host to view the application in your browser.
 - [ ]  Click E2E testing
 - [ ]  Click Start E2E Testing in Chrome
 
