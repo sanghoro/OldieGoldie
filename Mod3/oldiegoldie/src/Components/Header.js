@@ -10,7 +10,7 @@ import Logo from '../Assets/Logo.png';
 const Header = () => {
   return (
     <nav>
-      <div className="nav-left">
+      <div className="nav-home">
         <Link to="/" className="nav-link">
           <img src={HomeIcon} alt="Home-icon" />
         </Link>
@@ -20,7 +20,7 @@ const Header = () => {
           <img src={Logo} alt="Logo" aria-label='Oldie goldie logo'/>
         </Link>
       </div>
-      <div className="nav-right">
+      <div className="nav-icons">
         <Link to="/all-items" className="nav-link" id="all-products">
           <img src={ShopIcon} alt="Shop-icon" />
         </Link>
