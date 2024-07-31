@@ -1,0 +1,20 @@
+.page-not-found {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 5rem;
+}
+
+
+.errorHomeButton {
+    width: 20rem;
+    height: auto;
+    font-size: 1rem;
+    background-color: black;
+}
+
+.errorHomeButton a {
+    text-decoration: none;
+    color: white;
+}
