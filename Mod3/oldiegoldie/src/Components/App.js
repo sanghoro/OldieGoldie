@@ -12,7 +12,7 @@ import ItemDetails from './ItemDetails';
 import Header from './Header';
 import Footer from './Footer';
 import Receipt from './Receipt';
-
+import PageNotFound from './PageNotFound';
 
 function App() {
   const [bagItems, setBagItems] = useState([]);
@@ -71,6 +71,7 @@ function App() {
           <Route path="/electronics" element={<Electronics items={allItems} addToBag={handleAddToBag} />} />
           <Route path="/item/:id" element={<ItemDetails addToBag={handleAddToBag} />} />
           <Route path="/receipt" element={<Receipt receiptData={receiptData} />} />
+          <Route path='*' element={<PageNotFound />} />
         </Routes>
         </div>
       </div>
