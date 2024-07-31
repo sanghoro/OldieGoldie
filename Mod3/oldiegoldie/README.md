@@ -1,70 +1,71 @@
-# Getting Started with Create React App
+![Logo](https://github.com/user-attachments/assets/b2d5e8b3-b054-4d4a-9e83-49504a035633)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Abstract
+The “Oldie Goldie” project is a user friendly e-commerce app built with React. It allows users to browse various products from fakestoreAPI.
+The application features intuitive design, enabling users to effortlessly navigate through different categories- including all products, women's, men's jewelry and electronic sections.
+Users can search for specific products, and view detailed product information. Users can also add the desired products into the shopping bag, and it displays the subtotal, tax (texas based) and total amount.
+Additionally, the project includes robust error handling, in case of data fetching issues or navigation errors. 
+The project showcases modern web development practices, including the use of React hooks for state management, React Router for navigation, and Cypress for end-to-end testing. 
 
-In the project directory, you can run:
+[Check out our project HERE](https://oldie-goldie-et65dg1lg-seongs-projects-6f1afc27.vercel.app/)
 
-### `npm start`
+## Preview
+![OldieGoldie](https://github.com/user-attachments/assets/d4b35a85-ff04-464c-8d03-278517f22039)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Screenshots
+### Home Page
+![main-page](https://github.com/user-attachments/assets/f106c89a-c1ef-42b5-923e-81d1b3a3f44e)
 
-### `npm test`
+### All Products
+![all-products](https://github.com/user-attachments/assets/73d2b212-fa3b-4587-a659-c3f930a063ce)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Search Page
+![search-page](https://github.com/user-attachments/assets/00fd63cd-0e5d-486b-9823-2964086efd2b)
 
-### `npm run build`
+### Shopping Bag Page
+![bag-page](https://github.com/user-attachments/assets/7dc08580-243d-4edf-ab68-feb82f4fe47f)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Receipt Page
+![receipt-page](https://github.com/user-attachments/assets/2e734ee2-e654-4a39-9093-6518b442e543)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Mobile View
+![mobile-2](https://github.com/user-attachments/assets/bc69a3b4-32b5-45b6-bfd6-a937f0190e19)
+![mobile-1](https://github.com/user-attachments/assets/273e9c5b-008b-4a44-9763-aaf17162b249)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Installation Instructions
+### To start the app
+- [ ]  Clone down the repository onto your local machine using `git clone https://github.com/sanghoro/oldiegoldie`
+- [ ]  Once cloned down, cd into the direction and install dependencies by running `npm install`
+- [ ]  Run `npm start` then visit the local host to view the application in your browser.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### To test with Cypress
+- [ ]  Type `npm install cypress --save-dev` into your terminal
+- [ ]  Type `npm run cy:open #` in your terminal then visit the local host to view the application in your browser.
+- [ ]  Click E2E testing
+- [ ]  Click Start E2E Testing in Chrome
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Pre-Planning
+Used Github Project for Pre-planning. [here](https://github.com/users/sanghoro/projects/13)
+![Oldiegoldie-Layout v2](https://github.com/user-attachments/assets/be89b08b-c3f0-42da-b64d-f2ce74eab67e)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Learning Goals
+  * Gain more experience with React and Cypress.
+  * Develop a modular project structure.
+  * Utilize PR templates and a project board for efficient workflow management.
+  
+## Challenges
+  * Understanding the asynchronous nature of setState and how to work with it effectively.
+  * Handling state updates that depend on previous state values.
+  
+## Wins
+* Successfully carrying out the initial design and plan.
+* Successful integration of the API.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Contributions
+[Seong Kang - LinkedIn](https://www.linkedin.com/in/seong-kang/)
