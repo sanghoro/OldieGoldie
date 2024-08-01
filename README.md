@@ -8,7 +8,7 @@ Users can search for specific products, and view detailed product information. U
 Additionally, the project includes robust error handling, in case of data fetching issues or navigation errors. 
 The project showcases modern web development practices, including the use of React hooks for state management, React Router for navigation, and Cypress for end-to-end testing. 
 
-[Check out my project HERE](https://oldie-goldie-et65dg1lg-seongs-projects-6f1afc27.vercel.app/)
+[Check out my project HERE](https://oldie-goldie.vercel.app/)
 
 ## Preview
 ![OldieGoldie](https://github.com/user-attachments/assets/d4b35a85-ff04-464c-8d03-278517f22039)
